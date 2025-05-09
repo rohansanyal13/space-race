@@ -5,16 +5,16 @@ using UnityEngine.UI;
 public class Checkpoint : MonoBehaviour
 {
     private bool activated = false;
-    public Text checkpointText; // Drag your UI Text here
+    public Text checkpointText;
 
-    public float fadeDuration = 0.5f; // Time to fade in/out
-    public float displayDuration = 1.5f; // Time text stays fully visible
+    public float fadeDuration = 0.5f;
+    public float displayDuration = 1.5f;
 
-    private string checkpointID; // Unique ID for this checkpoint
+    private string checkpointID;
 
     private void Start()
     {
-        checkpointID = gameObject.name; // Using the GameObject name as ID (make sure names are unique!)
+        checkpointID = gameObject.name;
 
         // Check if checkpoint was already activated in saved data
         if (PlayerPrefs.GetInt(checkpointID, 0) == 1)
